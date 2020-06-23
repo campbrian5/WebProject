@@ -1,0 +1,87 @@
+<!-- HTML 4.01 Strict -->
+<!DOCTYPE HTML PUBLIC "-//W3C/DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <!--
+       Author: Brian Campbell
+
+       Gets some data to send to a database accessing jsp file.
+
+       I won't do any client side validation; I'll do it on the
+       server side for the input data.
+
+  -->
+  <head>
+    <title>Web Application Project</title>
+    
+  </head>
+  <body  style="font-family: Times" >
+
+    <!-- 
+
+       Get 
+
+       two senator names
+       two corporation names
+       two dates 
+
+       for low and high ranges
+
+       to use in performing a query
+
+       from the senators database.
+   
+    -->
+Please enter two senator names, two corporation names,
+and two date values in the form "yyyy-mm-dd".   <br/> <br/>
+
+I will return a table of all the (corporation, senator) pairs within
+the ranges specified,  <br/>
+along with how many times each corporation contributed to each senator, <br/>
+and the sum of all contributions between each pair.<br/><br/>
+
+     <form action="Results.jsp"  method="GET" 
+        onsubmit="return true;">
+
+
+        <table frame="void"  >
+           <tr> 
+              <td colspan="3" > sen Lo: <input type="text" size="30" name="sLo"
+                 maxlength="30" id="id3"  />
+              </td>
+              <td colspan="3" > sen Hi: <input type="text" size="30" name="sHi"
+                 maxlength="30" id="id4"  />
+              </td>
+           </tr>
+           <tr > 
+              <td colspan="3" > corp Lo: <input type="text" size="30" name="cLo"
+                 maxlength="30" id="id5"  />
+              </td>
+              <td colspan="2" > corp Hi: <input type="text" size="30" name="cHi"
+                 maxlength="30" id="id6"  />
+              </td>
+           </tr>
+      	  <tr> 
+              <td colspan="2" > date Lo: <input type="text" size="20" name="dLo"
+                 maxlength="20" id="id8"  />
+              </td>
+              <td colspan="2" > date Hi:<input type="text" size="20" name="dHi"
+                 maxlength="20" id="id9"  />
+              </td>
+
+           </tr>
+
+
+          <tr>
+              <td>
+                 <input type="reset" value="Clear Entries" />
+              </td>
+              <td>
+                 <input type="submit" value="Submit Data" />
+              </td>
+          </tr>
+       </table>
+    </form>
+   </body>
+</html>
+
